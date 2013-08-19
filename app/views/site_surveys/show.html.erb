@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @site_survey.date %>
+</p>
+
+<p>
+  <strong>Total:</strong>
+  <%= @site_survey.total %>
+</p>
+
+<p>
+  <strong>Freenumber:</strong>
+  <%= @site_survey.freeNumber %>
+</p>
+
+<p>
+  <strong>Halfnumber:</strong>
+  <%= @site_survey.halfNumber %>
+</p>
+
+<p>
+  <strong>Person:</strong>
+  <%= @site_survey.person_id %>
+</p>
+
+<p>
+  <strong>Party:</strong>
+  <%= @site_survey.party_id %>
+</p>
+
+<%= link_to 'Edit', edit_site_survey_path(@site_survey) %> |
+<%= link_to 'Back', site_surveys_path %>

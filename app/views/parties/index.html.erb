@@ -1,0 +1,119 @@
+<h1>Listing parties</h1>
+
+<table>
+  <thead>
+    <tr>
+		<th>編號</th>
+		<th>活動日期</th>
+		<th>團體名稱</th>
+		<th>主要公司(FK)</th>
+		<th>協辦公司(FK)</th>
+		<th>主辦人(FK)</th>
+		<th>結帳人(FK)</th>
+		<th>預計到達</th>
+		<th>預計離園</th>
+		<th>實際到達</th>
+		<th>實際離園</th>
+		<th>全票</th>
+		<th>半票</th>
+		<th>團全</th>
+		<th>團半</th>
+		<th>招待全票</th>
+		<th>招待半票</th>
+		<th>招待團全</th>
+		<th>招待團半</th>
+		<th>自治全票</th>
+		<th>自製半票</th>
+		<th>實結人數</th>
+		<th>總人數</th>
+		<th>大巴士數量</th>
+		<th>中巴士數量</th>
+		<th>自行開車</th>
+		<th>結帳金額</th>
+		<th>結帳方式</th>
+		<th>結帳公司</th>
+		<th>優待內容</th>
+		<th>適用專案</th>
+		<th>退傭</th>
+		<th>退傭出帳單位</th>
+		<th>退傭金額</th>
+		<th>手開發票</th>
+		<th>已取票</th>
+		<th>已付款</th>
+		<th>已領退傭茶水</th>
+		<th>茶水總金額</th>
+		<th>訂餐</th>
+		<th>訪談日期</th>
+		<th>備註</th>
+		<th>團招負責人</th>
+		<th>訪談紀錄者</th>
+		<th>編修記錄者</th>
+		<th>解說人員</th>
+		<th>團體國籍</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @parties.each do |party| %>
+      <tr>
+        <td><%= party.id %></td>
+        <td><%= party.date %></td>
+        <td><%= party.name %></td>
+        <td><%= party.main_company_id %></td>
+        <td><%= party.secondary_company_id %></td>
+        <td><%= party.connector %></td>
+        <td><%= party.biller %></td>
+        <td><%= party.arrive %></td>
+        <td><%= party.leave %></td>
+        <td><%= party.arriveActial %></td>
+        <td><%= party.leaveActial %></td>
+        <td><%= party.fullTicket %></td>
+        <td><%= party.halfTicket %></td>
+        <td><%= party.fullTicketG %></td>
+        <td><%= party.halfTicketG %></td>
+        <td><%= party.fullTicketFree %></td>
+        <td><%= party.halfTicketFree %></td>
+        <td><%= party.fullTicketGFree %></td>
+        <td><%= party.halfTicketGFree %></td>
+        <td><%= party.fullTicketDIY %></td>
+        <td><%= party.halfTicketDIY %></td>
+        <td><%= party.totalTicketPeople %></td>
+        <td><%= party.totalPeople %></td>
+        <td><%= party.bigBus %></td>
+        <td><%= party.middleBus %></td>
+        <td><%= party.selfDrive %></td>
+        <td><%= party.payTotal %></td>
+        <td><%= party.payType %></td>
+        <td><%= party.payMan %></td>
+        <td><%= party.specialSale %></td>
+        <td><%= party.project %></td>
+        <td><%= party.commission %></td>
+        <td><%= party.commissionAgent %></td>
+        <td><%= party.commissionAmount %></td>
+        <td><%= party.isHandReceipt %></td>
+        <td><%= party.isGetTicket %></td>
+        <td><%= party.isPaid %></td>
+        <td><%= party.isGetCommission %></td>
+        <td><%= party.mealAllowanceTotal %></td>
+        <td><%= party.meal %></td>
+        <td><%= party.reserveDate %></td>
+        <td><%= party.memo %></td>
+        <td><%= party.entranceEmp_id %></td>
+        <td><%= party.recordEmp_id %></td>
+        <td><%= party.modifyEmp_id %></td>
+        <td><%= party.guide %></td>
+        <td><%= party.country %></td>
+        <td><%= link_to 'Show', party %></td>
+        <td><%= link_to 'Edit', edit_party_path(party) %></td>
+        <td><%= link_to 'Destroy', party, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Party', new_party_path %>

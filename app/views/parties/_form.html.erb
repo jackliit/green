@@ -1,0 +1,201 @@
+<%= form_for(@party) do |f| %>
+  <% if @party.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@party.errors.count, "error") %> prohibited this party from being saved:</h2>
+
+      <ul>
+      <% @party.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :date %><br>
+    <%= f.date_select :date %>
+  </div>
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :main_company_id %><br>
+    <%= f.number_field :main_company_id %>
+  </div>
+  <div class="field">
+    <%= f.label :secondary_company_id %><br>
+    <%= f.number_field :secondary_company_id %>
+  </div>
+  <div class="field">
+    <%= f.label :connector %><br>
+    <%= f.number_field :connector %>
+  </div>
+  <div class="field">
+    <%= f.label :biller %><br>
+    <%= f.number_field :biller %>
+  </div>
+  <div class="field">
+    <%= f.label :arrive %><br>
+    <%= f.time_select :arrive %>
+  </div>
+  <div class="field">
+    <%= f.label :leave %><br>
+    <%= f.time_select :leave %>
+  </div>
+  <div class="field">
+    <%= f.label :arriveActial %><br>
+    <%= f.time_select :arriveActial %>
+  </div>
+  <div class="field">
+    <%= f.label :leaveActial %><br>
+    <%= f.time_select :leaveActial %>
+  </div>
+  <div class="field">
+    <%= f.label :fullTicket %><br>
+    <%= f.number_field :fullTicket %>
+  </div>
+  <div class="field">
+    <%= f.label :halfTicket %><br>
+    <%= f.number_field :halfTicket %>
+  </div>
+  <div class="field">
+    <%= f.label :fullTicketG %><br>
+    <%= f.number_field :fullTicketG %>
+  </div>
+  <div class="field">
+    <%= f.label :halfTicketG %><br>
+    <%= f.number_field :halfTicketG %>
+  </div>
+  <div class="field">
+    <%= f.label :fullTicketFree %><br>
+    <%= f.number_field :fullTicketFree %>
+  </div>
+  <div class="field">
+    <%= f.label :halfTicketFree %><br>
+    <%= f.number_field :halfTicketFree %>
+  </div>
+  <div class="field">
+    <%= f.label :fullTicketGFree %><br>
+    <%= f.number_field :fullTicketGFree %>
+  </div>
+  <div class="field">
+    <%= f.label :halfTicketGFree %><br>
+    <%= f.number_field :halfTicketGFree %>
+  </div>
+  <div class="field">
+    <%= f.label :fullTicketDIY %><br>
+    <%= f.number_field :fullTicketDIY %>
+  </div>
+  <div class="field">
+    <%= f.label :halfTicketDIY %><br>
+    <%= f.number_field :halfTicketDIY %>
+  </div>
+  <div class="field">
+    <%= f.label :totalTicketPeople %><br>
+    <%= f.number_field :totalTicketPeople %>
+  </div>
+  <div class="field">
+    <%= f.label :totalPeople %><br>
+    <%= f.number_field :totalPeople %>
+  </div>
+  <div class="field">
+    <%= f.label :bigBus %><br>
+    <%= f.number_field :bigBus %>
+  </div>
+  <div class="field">
+    <%= f.label :middleBus %><br>
+    <%= f.number_field :middleBus %>
+  </div>
+  <div class="field">
+    <%= f.label :selfDrive %><br>
+    <%= f.number_field :selfDrive %>
+  </div>
+  <div class="field">
+    <%= f.label :payTotal %><br>
+    <%= f.number_field :payTotal %>
+  </div>
+  <div class="field">
+    <%= f.label :payType %><br>
+    <%= f.text_field :payType %>
+  </div>
+  <div class="field">
+    <%= f.label :payMan %><br>
+    <%= f.text_field :payMan %>
+  </div>
+  <div class="field">
+    <%= f.label :specialSale %><br>
+    <%= f.text_field :specialSale %>
+  </div>
+  <div class="field">
+    <%= f.label :project %><br>
+    <%= f.text_field :project %>
+  </div>
+  <div class="field">
+    <%= f.label :commission %><br>
+    <%= f.text_field :commission %>
+  </div>
+  <div class="field">
+    <%= f.label :commissionAgent %><br>
+    <%= f.text_field :commissionAgent %>
+  </div>
+  <div class="field">
+    <%= f.label :commissionAmount %><br>
+    <%= f.number_field :commissionAmount %>
+  </div>
+  <div class="field">
+    <%= f.label :isHandReceipt %><br>
+    <%= f.check_box :isHandReceipt %>
+  </div>
+  <div class="field">
+    <%= f.label :isGetTicket %><br>
+    <%= f.check_box :isGetTicket %>
+  </div>
+  <div class="field">
+    <%= f.label :isPaid %><br>
+    <%= f.check_box :isPaid %>
+  </div>
+  <div class="field">
+    <%= f.label :isGetCommission %><br>
+    <%= f.check_box :isGetCommission %>
+  </div>
+  <div class="field">
+    <%= f.label :mealAllowanceTotal %><br>
+    <%= f.number_field :mealAllowanceTotal %>
+  </div>
+  <div class="field">
+    <%= f.label :meal %><br>
+    <%= f.text_field :meal %>
+  </div>
+  <div class="field">
+    <%= f.label :reserveDate %><br>
+    <%= f.date_select :reserveDate %>
+  </div>
+  <div class="field">
+    <%= f.label :memo %><br>
+    <%= f.text_area :memo %>
+  </div>
+  <div class="field">
+    <%= f.label :entranceEmp_id %><br>
+    <%= f.number_field :entranceEmp_id %>
+  </div>
+  <div class="field">
+    <%= f.label :recordEmp_id %><br>
+    <%= f.number_field :recordEmp_id %>
+  </div>
+  <div class="field">
+    <%= f.label :modifyEmp_id %><br>
+    <%= f.number_field :modifyEmp_id %>
+  </div>
+  <div class="field">
+    <%= f.label :guide %><br>
+    <%= f.text_field :guide %>
+  </div>
+  <div class="field">
+    <%= f.label :country %><br>
+    <%= f.text_field :country %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

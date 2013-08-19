@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Dealer:</strong>
+  <%= @driver_meal.dealer %>
+</p>
+
+<p>
+  <strong>Carsn:</strong>
+  <%= @driver_meal.carSn %>
+</p>
+
+<p>
+  <strong>Mealallowance:</strong>
+  <%= @driver_meal.mealAllowance %>
+</p>
+
+<p>
+  <strong>Driver:</strong>
+  <%= @driver_meal.driver_id %>
+</p>
+
+<p>
+  <strong>Party:</strong>
+  <%= @driver_meal.party_id %>
+</p>
+
+<%= link_to 'Edit', edit_driver_meal_path(@driver_meal) %> |
+<%= link_to 'Back', driver_meals_path %>

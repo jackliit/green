@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Place:</strong>
+  <%= @rent.place %>
+</p>
+
+<p>
+  <strong>Rentstart:</strong>
+  <%= @rent.rentStart %>
+</p>
+
+<p>
+  <strong>Rentend:</strong>
+  <%= @rent.rentEnd %>
+</p>
+
+<p>
+  <strong>Fullday:</strong>
+  <%= @rent.fullday %>
+</p>
+
+<p>
+  <strong>Party:</strong>
+  <%= @rent.party_id %>
+</p>
+
+<%= link_to 'Edit', edit_rent_path(@rent) %> |
+<%= link_to 'Back', rents_path %>

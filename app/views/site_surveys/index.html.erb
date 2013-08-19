@@ -1,0 +1,37 @@
+<h1>Listing site_surveys</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Date</th>
+      <th>Total</th>
+      <th>Freenumber</th>
+      <th>Halfnumber</th>
+      <th>Person</th>
+      <th>Party</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @site_surveys.each do |site_survey| %>
+      <tr>
+        <td><%= site_survey.date %></td>
+        <td><%= site_survey.total %></td>
+        <td><%= site_survey.freeNumber %></td>
+        <td><%= site_survey.halfNumber %></td>
+        <td><%= site_survey.person_id %></td>
+        <td><%= site_survey.party_id %></td>
+        <td><%= link_to 'Show', site_survey %></td>
+        <td><%= link_to 'Edit', edit_site_survey_path(site_survey) %></td>
+        <td><%= link_to 'Destroy', site_survey, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Site survey', new_site_survey_path %>

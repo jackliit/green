@@ -1,0 +1,35 @@
+<h1>Listing rents</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Place</th>
+      <th>Rentstart</th>
+      <th>Rentend</th>
+      <th>Fullday</th>
+      <th>Party</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @rents.each do |rent| %>
+      <tr>
+        <td><%= rent.place %></td>
+        <td><%= rent.rentStart %></td>
+        <td><%= rent.rentEnd %></td>
+        <td><%= rent.fullday %></td>
+        <td><%= rent.party_id %></td>
+        <td><%= link_to 'Show', rent %></td>
+        <td><%= link_to 'Edit', edit_rent_path(rent) %></td>
+        <td><%= link_to 'Destroy', rent, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Rent', new_rent_path %>

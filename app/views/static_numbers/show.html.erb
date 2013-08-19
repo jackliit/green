@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @static_number.date %>
+</p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @static_number.title %>
+</p>
+
+<p>
+  <strong>Number:</strong>
+  <%= @static_number.number %>
+</p>
+
+<%= link_to 'Edit', edit_static_number_path(@static_number) %> |
+<%= link_to 'Back', static_numbers_path %>

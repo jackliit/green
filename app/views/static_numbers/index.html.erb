@@ -1,0 +1,31 @@
+<h1>Listing static_numbers</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Date</th>
+      <th>Title</th>
+      <th>Number</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @static_numbers.each do |static_number| %>
+      <tr>
+        <td><%= static_number.date %></td>
+        <td><%= static_number.title %></td>
+        <td><%= static_number.number %></td>
+        <td><%= link_to 'Show', static_number %></td>
+        <td><%= link_to 'Edit', edit_static_number_path(static_number) %></td>
+        <td><%= link_to 'Destroy', static_number, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Static number', new_static_number_path %>

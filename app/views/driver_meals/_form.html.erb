@@ -1,0 +1,37 @@
+<%= form_for(@driver_meal) do |f| %>
+  <% if @driver_meal.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@driver_meal.errors.count, "error") %> prohibited this driver_meal from being saved:</h2>
+
+      <ul>
+      <% @driver_meal.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :dealer %><br>
+    <%= f.text_field :dealer %>
+  </div>
+  <div class="field">
+    <%= f.label :carSn %><br>
+    <%= f.text_field :carSn %>
+  </div>
+  <div class="field">
+    <%= f.label :mealAllowance %><br>
+    <%= f.number_field :mealAllowance %>
+  </div>
+  <div class="field">
+    <%= f.label :driver_id %><br>
+    <%= f.text_field :driver_id %>
+  </div>
+  <div class="field">
+    <%= f.label :party_id %><br>
+    <%= f.number_field :party_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

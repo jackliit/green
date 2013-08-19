@@ -1,0 +1,97 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  date: 2013-08-08
+  name: MyString
+  main_company_id: 1
+  secondary_company_id: 1
+  connector: 1
+  biller: 1
+  arrive: 2013-08-08 15:40:31
+  leave: 2013-08-08 15:40:31
+  arriveActial: 2013-08-08 15:40:31
+  leaveActial: 2013-08-08 15:40:31
+  fullTicket: 1
+  halfTicket: 1
+  fullTicketG: 1
+  halfTicketG: 1
+  fullTicketFree: 1
+  halfTicketFree: 1
+  fullTicketGFree: 1
+  halfTicketGFree: 1
+  fullTicketDIY: 1
+  halfTicketDIY: 1
+  totalTicketPeople: 1
+  totalPeople: 1
+  bigBus: 1
+  middleBus: 1
+  selfDrive: 1
+  payTotal: 1
+  payType: MyString
+  payMan: MyString
+  specialSale: MyString
+  project: MyString
+  commission: MyString
+  commissionAgent: MyString
+  commissionAmount: 1
+  isHandReceipt: false
+  isGetTicket: false
+  isPaid: false
+  isGetCommission: false
+  mealAllowanceTotal: 1
+  meal: MyString
+  reserveDate: 2013-08-08
+  memo: MyText
+  entranceEmp_id: 1
+  recordEmp_id: 1
+  modifyEmp_id: 1
+  guide: MyString
+  country: MyString
+
+two:
+  date: 2013-08-08
+  name: MyString
+  main_company_id: 1
+  secondary_company_id: 1
+  connector: 1
+  biller: 1
+  arrive: 2013-08-08 15:40:31
+  leave: 2013-08-08 15:40:31
+  arriveActial: 2013-08-08 15:40:31
+  leaveActial: 2013-08-08 15:40:31
+  fullTicket: 1
+  halfTicket: 1
+  fullTicketG: 1
+  halfTicketG: 1
+  fullTicketFree: 1
+  halfTicketFree: 1
+  fullTicketGFree: 1
+  halfTicketGFree: 1
+  fullTicketDIY: 1
+  halfTicketDIY: 1
+  totalTicketPeople: 1
+  totalPeople: 1
+  bigBus: 1
+  middleBus: 1
+  selfDrive: 1
+  payTotal: 1
+  payType: MyString
+  payMan: MyString
+  specialSale: MyString
+  project: MyString
+  commission: MyString
+  commissionAgent: MyString
+  commissionAmount: 1
+  isHandReceipt: false
+  isGetTicket: false
+  isPaid: false
+  isGetCommission: false
+  mealAllowanceTotal: 1
+  meal: MyString
+  reserveDate: 2013-08-08
+  memo: MyText
+  entranceEmp_id: 1
+  recordEmp_id: 1
+  modifyEmp_id: 1
+  guide: MyString
+  country: MyString

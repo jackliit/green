@@ -1,0 +1,37 @@
+<%= form_for(@rent) do |f| %>
+  <% if @rent.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@rent.errors.count, "error") %> prohibited this rent from being saved:</h2>
+
+      <ul>
+      <% @rent.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :place %><br>
+    <%= f.text_field :place %>
+  </div>
+  <div class="field">
+    <%= f.label :rentStart %><br>
+    <%= f.time_select :rentStart %>
+  </div>
+  <div class="field">
+    <%= f.label :rentEnd %><br>
+    <%= f.time_select :rentEnd %>
+  </div>
+  <div class="field">
+    <%= f.label :fullday %><br>
+    <%= f.check_box :fullday %>
+  </div>
+  <div class="field">
+    <%= f.label :party_id %><br>
+    <%= f.number_field :party_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

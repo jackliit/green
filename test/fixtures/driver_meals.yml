@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  dealer: MyString
+  carSn: MyString
+  mealAllowance: 1
+  driver_id: MyString
+  party_id: 1
+
+two:
+  dealer: MyString
+  carSn: MyString
+  mealAllowance: 1
+  driver_id: MyString
+  party_id: 1

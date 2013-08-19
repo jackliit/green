@@ -1,0 +1,35 @@
+<h1>Listing driver_meals</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Dealer</th>
+      <th>Carsn</th>
+      <th>Mealallowance</th>
+      <th>Driver</th>
+      <th>Party</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @driver_meals.each do |driver_meal| %>
+      <tr>
+        <td><%= driver_meal.dealer %></td>
+        <td><%= driver_meal.carSn %></td>
+        <td><%= driver_meal.mealAllowance %></td>
+        <td><%= driver_meal.driver_id %></td>
+        <td><%= driver_meal.party_id %></td>
+        <td><%= link_to 'Show', driver_meal %></td>
+        <td><%= link_to 'Edit', edit_driver_meal_path(driver_meal) %></td>
+        <td><%= link_to 'Destroy', driver_meal, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Driver meal', new_driver_meal_path %>
